@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Tunneler</title>
+
+    <!-- Google Tag Manager -->
+    <script>
+        (function(w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-P2B55HF');
+    </script>
+    <!-- End Google Tag Manager -->
+
+    <meta name="description" content="Enjoy games, chat, unblockers, and more!">
+
+    <link rel="icon" type="image/png" href="/assets/images/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="/assets/images/favicon-16x16.png" sizes="16x16" />
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Product+Sans:400,400i,700,700i' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900" rel="stylesheet">
+
+    <link type="text/css" rel="stylesheet" href="/assets/materialize/css/materialize.css" media="screen,projection" />
+    <link rel="stylesheet" href="/assets/styles/styles.css">
+    <link href="https://file.myfontastic.com/pK2gUqLQUfCn3ScMEZhDmc/icons.css" rel="stylesheet">
+    <script src="https://use.fontawesome.com/c618b02741.js"></script>
+    <link rel="stylesheet" href="/pages/chat/assets/css/chatx_styles.css" />
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-8667326290704454",
+            enable_page_level_ads: true
+        });
+    </script>
+
+</head>
+
+<body>
+
+    <noscript>
+        <style>
+            * {
+                display: none !important;
+            }
+        </style>
+    </noscript>
+
+    <a href="javascript:" id="return-to-top"><i class="fa fa-chevron-up" aria-hidden="true"></i></a>
+
+    <div class="pagewrap">
+        <div class="bookmarkcontainer">
+
+            <div class="bookmarks" onclick="document.location='/pages/gomovies'">
+                <img style="height: 48px;" src="/assets/images/GoMovies.png">
+            </div>
+
+            <div class="bookmarks" onclick="document.location='https://youtube.com'">
+                <img style="height: 48px;" src="/assets/images/YouTube.png">
+            </div>
+
+            <div class="bookmarks" onclick="document.location='/'">
+                <img style="height: 48px;" src="/assets/images/Funblocked.png">
+            </div>
+
+        </div>
+
+        <div class="leftwrap">
+
+            <div id="chatx" class="chat">
+                <header>
+                    <h1><i class="icon-chat"></i> <span style="margin-left: 3px;">Chat</span> <input id="false_shoutbox_name" type="name" maxlength="15" placeholder="Enter name" onblur="javascript:getElementById('shoutbox-name').value=this.value" /><div class="name-required">Please insert your name</div> <i class="icon-refresh"></i>
+                    <div class="chat_popover_parent"> <a href="javascript:void(0);" class="chat_btn"><i class="icon-gear"></i></a>
+                        <div class="chat_popover"><div><span>Fast track update</span><input type="checkbox" id="icd" name="icd" value="icd" /><span></span><label for="icd"></label></div></div>
+                    </div>
+                </h1>
+                </header>
+                <div class="body">
+                    <div class="shoutbox">
+                        <ul class="shoutbox-content"></ul>
+                        <div class="shoutbox-helper">
+                            <p>New messages above</p>
+                            <hr>
+                            <span>Formatting tags:
+                        <li>[b]Text[/b] results in: <b>Text</b></li>
+                        <li>[i]Text[/i] results in: <i>Text</i></li>
+                        <li>[u]Text[/u] results in: <u>Text</u></li>
+                        <li>[color=red]Text[/color] results in: <span style="color: red">Text</span></li>
+                            <li>[img]Img.jpg[/img] produces an image</li>
+                            <li>[url]Url[/url] produces a link</li>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="shoutbox-form">
+                    <form id="NewMessage">
+                        <input type="hidden" id="shoutbox-name" name="name" maxlength="15" />
+                        <div class="uploadmaskwrap">
+                            <div class="uploadmask"></div>
+                        </div>
+                        <div class="dropzone"></div>
+                        <textarea id="shoutbox-comment" class="js-elasticArea" rows="2" data-min-rows="2" placeholder="Start typing..." name="comment" maxlength='240'></textarea>
+                        <button id="send_message" type="submit" style="display: none;" onclick="chatSubmit();"><i class="icon-send"></i></button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="leftsection">
+
+                <h1>Info</h1>
+
+                <div class="accordionwrap">
+                    <button class="accordion">Suggest New Games</button>
+                    <div class="panel">
+                        <p>Just fill out <a href="https://docs.google.com/forms/d/e/1FAIpQLSeqixX2SBZbuqAv0ShhaEKyCDpnoyFjgNlWHVK7YjOJ2GDgXA/viewform?embedded=true">this</a> form!</p>
+                    </div>
+
+                    <button class="accordion">Unblocker Button</button>
+                    <div class="panel">
+                        <p>First, if you don't have the bookmarks bar at the top of your screen, press CTRL + SHIFT + B. Then, drag this button to the bookmarks bar.</p>
+                        <a class="bookmarklet" onclick="window.alert('Drag this button to your bookmarks bar...');return false;" href='javascript:void function(){const params=new URLSearchParams(window.location.search),url=params.get("url")||window.location.href;window.location.href="https://summitnet.pw/index.php?q="+btoa(url)}();'>Unblock</a>
+                        <p>Once you have added the button, any time you get redirected to a <b>BLOCKED</b> page, just press it and the website will be unblocked.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="leftsection">
+
+                <h1>Navigation</h1>
+
+                <div class="accordionwrap">
+
+                    <button class="accordion">Games</button>
+                    <div class="panel">
+                        <p>
+                            <a href="#tetris">Tetris</a>
+                            <br>
+                            <a href="#pacman">Pacman</a>
+                            <br>
+                            <a href="#piperiders">Pipe Riders</a>
+                            <br>
+                            <a href="#snake">Snake</a>
+                            <br>
+                            <a href="#roguesoul">Rogue Soul</a>
+                            <br>
+                            <a href="#strikeforceheroes">Strike Force Heroes 3</a>
+                            <br>
+                            <a href="#sonic">Sonic</a>
+                            <br>
+                            <a href="#happywheels">Happy Wheels</a>
+                            <br>
+                            <a href="#freerider">Free Rider</a>
+                            <br>
+                            <a href="#enchantedcave">Enchanted Cave</a>
+                            <br>
+                            <a href="#galaga">Galaga</a>
+                            <br>
+                            <a href="#mariostar">Mario Star</a>
+                            <br>
+                            <a href="#caviator">Caviator</a>
+                            <br>
+                            <a href="#radiusraid">Radius Raid</a>
+                            <br>
+                            <a href="#avoidrage">Avoid Rage</a>
+                            <br>
+                            <a href="#bloblivion">Bloblivion</a>
+                            <br>
+                            <a href="#squaresprint">Square Sprint</a>
+                            <br>
+                            <a href="#monomove">Mono Move</a>
+                            <br>
+                            <a href="#itchaskitch">Itch A Skitch</a>
+                            <br>
+                            <a href="#sugarsugar">Sugar, Sugar</a>
+                            <br>
+                        </p>
+                    </div>
+
+                    <a style="color: inherit;" href="#flashplayer">
+                        <button class="accordion">Flash Player</button>
+                    </a>
+                </div>
+            </div>
+
+            <div class="leftsection">
+
+            </div>
+
+        </div>
+
+        <div class="main">
+
+            <div class="section">
+
+                <h1>Tunneler</h1>
+
+                <form action="index.php" method="post">
+                    <input name="url" id="url" type="text" style="width: 80%;" autocomplete="off" placeholder="Enter web adress" required />
+                    <button class="waves-effect waves-light btn" style="margin: 0; margin-left: 10px; margin-top: 5px;" type="submit" name="action">Tunnel</button>
+                </form>
+
+            </div>
+
+            <div class="section">
+
+                <h1>Games</h1>
+
+                <h2 id="tetris">Tetris</h2>
+                <div class="games preview" style="width: 62vw; height: 40vw;  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/assets/images/previews/Tetris.png');">
+                    <img class="swf play" src="/assets/images/Play.svg" size="width: 62vw; height: 40vw" url="/assets/games/Tetris.swf">
+                </div>
+
+                <h2 id="pacman">Pacman</h2>
+                <div class="games preview" style="width: 34vw; height: 40vw; background-color: #000;  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/assets/images/previews/Pacman.png');">
+                    <img class="swf play" src="/assets/images/Play.svg" size="width: 34vw; height: 40vw;" url="/assets/games/Pacman.swf">
+                </div>
+
+                <h2 id="piperiders">Pipe Riders</h2>
+                <div class="games preview" style="width: 53.3vw; height: 40vw; background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/assets/images/previews/PipeRiders.png');">
+                    <img class="swf play" src="/assets/images/Play.svg" size="width: 53.3vw; height: 40vw;" url="/assets/games/PipeRiders.swf">
+                </div>
+
+                <h2 id="snake">Snake</h2>
+                <div class="games preview" style="width: 40vw; height: 40vw; background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/assets/images/previews/Snake.png');">
+                    <img class="swf play" src="/assets/images/Play.svg" size="width: 40vw; height: 40vw;" url="/assets/games/Snake.swf">
+                </div>
+
+                <h2 id="roguesoul">Rogue Soul</h2>
+                <div class="games preview" style="width: 53.33vw; height: 40vw; background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/assets/images/previews/RogueSoul.png');">
+                    <img class="swf play" src="/assets/images/Play.svg" size="width: 53.33vw; height: 40vw;" url="/assets/games/RogueSoul.swf">
+                </div>
+
+                <h2 id="strikeforceheroes">Strike Force Heroes 3</h2>
+                <div class="games preview" style="width: 53.33vw; height: 40vw; background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/assets/images/previews/StrikeForceHeroes.png');">
+                    <img class="swf play" src="/assets/images/Play.svg" size="width: 53.33vw; height: 40vw;" url="/assets/games/StrikeForceHeroes.swf">
+                </div>
+
+                <h2 id="sonic">Sonic</h2>
+                <div class="games preview" style="width: 56vw; height: 40vw; background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/assets/images/previews/Sonic.png');">
+                    <img class="swf play" src="/assets/images/Play.svg" size="width: 56vw; height: 40vw;" url="/assets/games/Sonic.swf">
+                </div>
+
+                <h2 id="happywheels">Happy Wheels</h2>
+                <div class="games preview" style="width: 72vw; height: 40vw; background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/assets/images/previews/HappyWheels.png');">
+                    <img class="swf play" src="/assets/images/Play.svg" size="width: 72vw; height: 40vw;" url="/assets/games/HappyWheels.swf">
+                </div>
+
+                <h2 id="freerider">Free Rider</h2>
+                <div class="games preview" style="width: 50vw; height: 40vw; background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/assets/images/previews/FreeRider.png');">
+                    <img class="swf play" src="/assets/images/Play.svg" size="width: 50vw; height: 40vw;" url="/assets/games/FreeRider.swf">
+                </div>
+
+                <h2 id="enchantedcave">Enchanted Cave</h2>
+                <div class="games preview" style="width: 70vw; height: 40vw; background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/assets/images/previews/EnchantedCave.png');">
+                    <img class="swf play" src="/assets/images/Play.svg" size="width: 70vw; height: 40vw;" url="/assets/games/EnchantedCave.swf">
+                </div>
+
+                <h2 id="galaga">Galaga</h2>
+                <div class="games preview" style="width: 34.4vw; height: 40vw; background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/assets/images/previews/Galaga.png');">
+                    <img class="swf play" src="/assets/images/Play.svg" size="width: 34.4vw; height: 40vw;" url="/assets/games/Galaga.swf">
+                </div>
+
+                <h2 id="mariostar">Mario Star</h2>
+                <div class="games preview" style="width: 64vw; height: 40vw; background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/assets/images/previews/MarioStar.png');">
+                    <img class="swf play" src="/assets/images/Play.svg" size="width: 64vw; height: 40vw;" url="/assets/games/MarioStar.swf">
+                </div>
+
+                <h2 id="caviator">Caviator</h2>
+                <div class="games preview" style="width: 59.5vw; height: 40vw; background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/assets/images/previews//Caviator.png');">
+                    <img class="iframe play" src="/assets/images/Play.svg" size="width: 59.5vw; height: 40vw;" url="https://jackrugile.com/caviator">
+                </div>
+
+                <h2 id="radiusraid">Radius Raid</h2>
+                <div class="games preview" style="width: 52.8vw; height: 40vw; background-size: contain; background-color: black; background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/assets/images/previews/RadiusRaid.png');">
+                    <img class="iframe play" src="/assets/images/Play.svg" size="width: 52.8vw; height: 40vw;" url="https://jackrugile.com/radius-raid">
+                </div>
+
+                <h2 id="avoidrage">Avoid Rage</h2>
+                <div class="games preview" style="width: 40vw; height: 40vw; background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/assets/images/previews/AvoidRage.png');">
+                    <img class="iframe play" src="/assets/images/Play.svg" size="width: 40vw; height: 40vw;" url="https://jackrugile.com/avoid-rage">
+                </div>
+
+                <h2 id="bloblivion">Bloblivion</h2>
+                <div class="games preview" style="width: 59.2vw; height: 40vw; background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/assets/images/previews/Bloblivion.png');">
+                    <img class="iframe play" src="/assets/images/Play.svg" size="width: 59.2vw; height: 40vw;" url="https://jackrugile.com/bloblivion">
+                </div>
+
+                <h2 id="squaresprint">Square Sprint</h2>
+                <div class="games preview" style="width: 59.2vw; height: 40vw; background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/assets/images/previews/SquareSprint.png');">
+                    <img class="iframe play" src="/assets/images/Play.svg" size="width: 59.2vw; height: 40vw;" url="https://jackrugile.com/square-sprint">
+                </div>
+
+                <h2 id="monomove">Mono Move</h2>
+                <div class="games preview" style="width: 71vw; height: 40vw; background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/assets/images/previews/MonoMove.png');">
+                    <img class="iframe play" src="/assets/images/Play.svg" size="width: 71vw; height: 40vw;" url="https://jackrugile.com/mono-move">
+                </div>
+
+                <h2 id="itchaskitch">Itch A Skitch</h2>
+                <div class="games preview" style="width: 48.63vw; height: 40vw; background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/assets/images/previews/Itch.png');">
+                    <img class="iframe play" src="/assets/images/Play.svg" size="width: 48.63vw; height: 40vw;" url="/itch.html">
+                </div>
+
+                <h2 id="sugarsugar">Sugar, Sugar</h2>
+                <div class="games preview" style="width: 53.3vw; height: 40vw; background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/assets/images/previews/Sugar.png');">
+                    <img class="swf play" src="/assets/images/Play.svg" size="width: 53.3vw; height: 40vw;" url="https://www.mathplayground.com/logicgames/logic_sugar_sugar_3.swf">
+                </div>
+
+            </div>
+
+            <div class="section">
+                <h1 id="flashplayer">Flash File Player</h1>
+                <script src="/assets/js/swf1.js"></script>
+                <div style="margin: auto; width: 100%; margin-top: 10px;">
+                    <div class="file-field input-field" style="width: 65%; margin: 0 auto;">
+                        <div id="dfile1" class="btn" style="display: inline;">
+                            <span>Select</span>
+                            <input type="file" id="fileload1" name="files[]" accept=".swf">
+                        </div>
+                        <div class="file-path-wrapper">
+                            <input class="file-path validate" id="filetext" type="text" placeholder="Choose a file">
+                        </div>
+                    </div>
+                    <script src="/assets/js/swf2.js"></script>
+                    <div class="left-align" style="margin-top: 10px; margin-bottom: 15px;">
+                        <div style="margin: 0 auto; margin-bottom: 15px; width: 65%;">
+                            <div class="grey-text" style="font-size: 15px; margin-bottom: -15px;">Width</div>
+                            <p class="range-field" style="display: inline-block; width: calc(100% - 60px);">
+                                <input id="size_width" class="range" max="1500" min="100" onchange="size_width_onchange(this)" step="1" type="range" value="500">
+                            </p>
+                            <div class="input-field inline">
+                                <input id="size_width_n" id="1" max="1500" min="100" onchange="size_width_n_onchange(this)" style="width: 50px;" type="number" value="500">
+                            </div>
+                        </div>
+                        <div style="margin: 0 auto; margin-bottom: 15px; width: 65%;">
+                            <div class="grey-text" style="font-size: 15px; margin-bottom: -15px;">Height</div>
+                            <p class="range-field" style="display: inline-block; width: calc(100% - 60px);">
+                                <input id="size_height" class="range" id="1" max="1500" min="100" onchange="size_width_onchange(this)" step="1" type="range" value="500">
+                            </p>
+                            <div class="input-field inline">
+                                <input id="size_height_n" id="1" max="1500" min="100" onchange="size_width_n_onchange(this)" style="width: 50px;" type="number" value="500">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="vphistory" style="display: none;"></div>
+                    <div id="codearea" style="width: 500px; height: 500px; background: #EBEBEB; margin: 0 auto; margin-top: -20px; margin-bottom: 10px;"></div>
+                    <div style="margin: 0 auto; margin-top: 10px; width: fit-content;">
+                        <button disabled="true" class="swffbutton btn" id="btn_save" onclick="proc_save()" title="Save this game's width and height">Save Size</button>
+                        <button disabled="true" class="swffbutton btn" id="btn_refresh" onclick="proc_refresh()">Refresh</button>
+                        <button disabled="false" class="swffbutton btn" id="btn_close" onclick="proc_close()">Reset</button>
+                    </div>
+                    <script src="/assets/js/swf3.js"></script>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Accordion script -->
+
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].onclick = function() {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.maxHeight) {
+                    panel.style.maxHeight = null;
+                } else {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                }
+            }
+        }
+    </script>
+
+    <!-- Game scripts -->
+
+    <script>
+        $('.swf').click(function() {
+            gameobject = '<object class="games" style="' + $(this).attr('size') + '" type="application/x-shockwave-flash" data="' + $(this).attr('url') + '"></object>';
+            $(this).replaceWith(gameobject);
+        });
+
+        $('.iframe').click(function() {
+            gameobject = '<iframe class="games" style="' + $(this).attr('size') + '" src="' + $(this).attr('url') + '"></iframe>';
+            $(this).replaceWith(gameobject);
+        });
+    </script>
+
+    <!-- Chat stuff -->
+
+    <script src="/pages/chat/assets/js/draggable.min.js"></script>
+    <script src="/pages/chat/assets/js/script.js" charset="UTF-8"></script>
+    <style>
+        #send_message {
+            display: initial !important;
+        }
+    </style>
+
+    <!-- Scroll script -->
+
+    <script>
+        $('a[href*="#"]')
+            .not('[href="#"]')
+            .not('[href="#0"]')
+            .click(function(event) {
+                if (
+                    location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') &&
+                    location.hostname == this.hostname
+                ) {
+                    var target = $(this.hash);
+                    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                    if (target.length) {
+                        event.preventDefault();
+                        $('html, body').animate({
+                            scrollTop: target.offset().top
+                        }, 1000);
+                    }
+                }
+            });
+    </script>
+
+    <!-- Scroll to top -->
+
+    <script>
+        $(document).ready(function() {
+            $(window).scroll(function() {
+                if ($(this).scrollTop() > 100) {
+                    $('#return-to-top').fadeIn();
+                } else {
+                    $('#return-to-top').fadeOut();
+                }
+            });
+            $('#return-to-top').click(function() { // When arrow is clicked
+                $('body,html').animate({
+                    scrollTop: 0 // Scroll to top of body
+                }, 500);
+            });
+        });
+    </script>
+
+    <!-- Chat upload image overlay fix -->
+
+    <script>
+        $('.uploadmask').click(function(e) {
+            var left = $(window).scrollLeft();
+            var top = $(window).scrollTop();
+
+            //hide the overlay for now so the document can find the underlying elements
+            $(this).css('display', 'none');
+            //use the current scroll position to deduct from the click position
+            $(document.elementFromPoint(e.pageX - left, e.pageY - top)).click();
+            //show the overlay again
+            $(this).css('display', 'block');
+        });
+
+        $(function() {
+            $('.uploadmask').hover(function() {
+                $('.icon-upload').css('color', '#1976D2');
+            }, function() {
+                // on mouseout, reset the color
+                $('.icon-upload').css('color', '');
+            });
+        });
+    </script>
+
+    <script type="text/javascript" src="/assets/materialize/js/materialize.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/emojione@3.1.2/lib/js/emojione.min.js"></script>
+
+</body>
+
+</html>
