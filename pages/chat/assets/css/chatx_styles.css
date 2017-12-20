@@ -1,0 +1,479 @@
+/* ------- Mini-chat-box template ------- */
+
+@import 'color_scheme.css';
+
+#chatx {
+  opacity: 0;
+}
+
+.chat {
+  font-family: sans-serif;
+  font-size: 14px !important;
+  margin: 7px;
+  display: block;
+  border: none;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  float: left;
+  border-radius: 5px;
+  height: 462px;
+  width: 20vw; /*285px*/
+  min-width: 250px;
+  max-width: 300px;
+  background: #f9fafb;
+}
+
+/* .chat header {
+  cursor: move;
+} */
+
+.chat h1 {
+  box-shadow: 0px 1px 1px 0.00px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  position: relative;
+  height: 36px;
+  text-align: left;
+  margin: 0;
+  border-radius: 5px 5px 0 0;
+  font-size: 16px;
+  line-height: 36px;
+}
+
+.chat .body {
+  position: relative;
+  height: 360px;
+  overflow-y: auto;
+}
+
+/* .chat .body::-webkit-scrollbar {
+  width: .5em;
+  display: initial;
+} */
+
+.chat .body::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 4px solid #d8d8d8;
+}
+
+.chat .body::-webkit-scrollbar-track {
+  background: #d8d8d8;
+}
+
+/* ------- The comments content ------- */
+
+.shoutbox-content {
+  list-style: none;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-size: inherit;
+  line-height: 20px;
+  font-weight: 700;
+  text-align: left;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.shoutbox-content li {
+  padding: 11px;
+  border-style: solid;
+  border-width: 0 0 1px 0;
+}
+
+.shoutbox-username {
+  display: inline;
+  text-align: left;
+  margin-right: 5px;
+}
+
+.shoutbox-comment {
+  display: inline;
+  font-weight: 400;
+  text-align: left;
+}
+
+.shoutbox-comment-details {
+  width: 100%;
+  margin: 5px auto;
+  height: 11px;
+}
+
+.shoutbox-comment-reply {
+  display: inline-block;
+  float: left;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 20px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.shoutbox-comment-ago {
+  display: inline-block;
+  float: right;
+  font-size: 11px;
+  font-weight: normal;
+  line-height: 20px;
+  text-align: right;
+}
+
+/* ------- ShoutBox helper ------- */
+.shoutbox-helper {
+  padding: 10px 15px;
+  border-style: solid;
+  border-width: 2px 0 0 0;
+}
+
+.shoutbox-helper p {
+  margin: 0;
+  text-align: center;
+  font-size: inherit;
+  text-transform: uppercase;
+}
+
+.shoutbox-helper span {
+  font-size: 13px;
+  line-height: 20px;
+}
+
+.shoutbox-helper hr {
+  width: 75%;
+  height: 2px;
+  background: #d5dbe1;
+  border: 0;
+}
+
+/* ------- Writing a new comment form ------- */
+
+.shoutbox-form form {
+  display: block;
+  max-width: 100%;
+  text-align: left;
+  padding: 0;
+  border-style: solid;
+  border-width: 1px 0 0 0;
+  border-radius: 0 0 5px 5px;
+}
+
+#false_shoutbox_name {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  max-width: 95px;
+  height: 18px;
+  padding: 0;
+  border: 0;
+  border-bottom: 2px solid;
+  border-radius: 0;
+  box-shadow: none;
+  outline: none;
+  margin-left: 8px;
+}
+
+.name-required {
+  display: none;
+  position: absolute;
+  width: 73%;
+  height: 35px;
+  top: 4em;
+  right: 0;
+  text-align: center;
+  line-height: 35px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 300;
+  text-transform: uppercase;
+  z-index: 1;
+}
+
+.name-required:before {
+  content: "";
+  position: absolute;
+  right: 50%;
+  margin-right: -10px;
+  top: -20px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10px;
+}
+
+.chat_btn {
+  color: inherit !important;
+}
+
+.shoutbox-form form #shoutbox-comment {
+  display: inline-block;
+  vertical-align: top;
+  width: calc(100% - 57px);
+  min-height: 50px;
+  margin: 10px 5px 5px 10px;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  outline: none;
+  resize: none;
+  font-weight: normal;
+  font: inherit;
+  font-size: inherit;
+  line-height: 18px !important;
+  text-indent: 26px;
+  overflow: hidden;
+}
+
+.shoutbox-form form input[type=submit] {
+  background: transparent;
+  border: 0;
+  width: 33px;
+  height: 33px;
+  right: 0;
+  position: absolute;
+  outline: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.shoutbox-content .chatx_img {
+  max-width: 100%;
+  max-height: 200px;
+  margin: 10px auto;
+  margin-top: 7.5px;
+  display: block;
+}
+
+.shoutbox-content .emojione {
+  display: inline-block;
+  margin: 0;
+}
+
+#send_message {
+  display: inline-block;
+  vertical-align: middle;
+  right: 0;
+  width: 32px;
+  height: 32px;
+  margin-right: 10px;
+  margin-top: 10px;
+  padding: 0;
+  font-size: 32px;
+  color: inherit;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  cursor: pointer;
+  outline: none;
+  position: absolute;
+  overflow: hidden;
+}
+
+/* ------- Placeholders and some fixes ------- */
+
+#false_shoutbox_name::-webkit-input-placeholder {
+ /* Chrome/Opera/Safari */
+  text-align: center;
+}
+
+#false_shoutbox_name::-moz-placeholder {
+ /* Firefox 19+ */
+  text-align: center;
+}
+
+#false_shoutbox_name:-ms-input-placeholder {
+ /* IE 10+ */
+  text-align: center;
+}
+
+#false_shoutbox_name:-moz-placeholder {
+ /* Firefox 18- */
+  text-align: center;
+}
+
+.shoutbox-form form #shoutbox-comment::-webkit-input-placeholder {
+ /* fixing text-indent for iOS Safari */
+  text-indent: 26px;
+}
+
+/* ------- Icons ------- */
+.icon-chat {
+  padding-left: 10px;
+  font-size: 20px;
+  vertical-align: middle;
+}
+
+.icon-gear {
+  position: absolute;
+  right: 10px;
+  font-size: 20px;
+  top: 3px;
+}
+
+.icon-refresh {
+  position: absolute;
+  top: 3px;
+  right: 35px;
+  font-size: 20px;
+  float: right;
+  cursor: pointer;
+}
+
+.icon-send {
+  transition-duration: 0.15s;
+  transition-timing-function: ease-out;
+}
+
+.icon-upload {
+  transition-duration: 0.15s;
+  transition-timing-function: ease-out;
+}
+
+.chat_popover_parent {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.chat_popover {
+  display: none;
+  right: 0;
+  border-radius: 4px;
+  position: absolute;
+  top: 3em;
+  z-index: 1;
+  width: 220px;
+  font-family: sans-serif;
+  line-height: 25px;
+}
+
+.chat_popover:before {
+  content: "";
+  position: absolute;
+  right: 10px;
+  top: -20px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10px;
+}
+
+.chat_popover span {
+  padding: 0 10px;
+  font-size: 12px !important;
+}
+
+.chat_popover div {
+  margin: 12px;
+}
+
+.active .chat_popover {
+  display: block;
+}
+
+.chat input[type=checkbox] {
+  display: none;
+}
+
+.chat label {
+  width: 45px;
+  height: 25px;
+  box-sizing: border-box;
+  border: 2px solid;
+  float: left;
+  border-radius: 100px;
+  position: relative;
+  cursor: pointer;
+  transition: .3s ease;
+}
+
+.chat input[type=checkbox]:checked + span + label:before {
+  left: 20px;
+}
+
+.chat label:before {
+  transition: .3s ease;
+  content: '';
+  width: 19px;
+  height: 19px;
+  position: absolute;
+  left: 2px;
+  top: 1px;
+  box-sizing: border-box;
+  border: 2px solid;
+  border-radius: 100px;
+}
+
+.dropzone {
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  margin-top: 12px;
+  margin-left: 10px;
+  font-size: 16px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.dropzone input[type=file] {
+  height: 100%;
+  left: 0;
+  outline: 0;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  cursor: pointer;
+}
+
+.dropzone+.status {
+}
+
+.dropzone+.status.bg-danger {
+  position: absolute;
+  width: 80%;
+  height: 35px;
+  margin-top: -40px;
+  text-align: center;
+  line-height: 35px;
+  text-transform: uppercase;
+  border-radius: 4px;
+}
+
+.status.bg-danger:after {
+  content: "";
+  position: absolute;
+  left: 10px;
+  top: 35px;
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+  border-top: 10px solid rgba(255, 187, 187, 0.95);
+}
+
+.dropzone.dropzone-dragging {
+  border-color: #000;
+}
+
+.loading-modal {
+  background-color: rgba(72, 72, 72, 0.95);
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 85px;
+  margin-top: -58px;
+  border-radius: 7px;
+  height: 115px;
+  width: 115px;
+}
+
+.loading-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -16px 0 0 -16px;
+}
+
+.busy .loading-modal {
+  display: block;
+}
+
+/* ------- Emoji One styles ------- */
+.emojione{font-size:inherit;height:3ex;width:3.1ex;min-height:20px;min-width:20px;display:inline-block;margin:-.2ex .15em .2ex;line-height:normal;vertical-align:middle}img.emojione{width:auto}
